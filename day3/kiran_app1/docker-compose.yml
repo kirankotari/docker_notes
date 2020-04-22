@@ -1,0 +1,8 @@
+version: "3.5"
+services:
+  app1: # app name
+    image: alpine
+    container_name: kiran_c1
+    command: ping fb.com # parent process (CMD in Dockerfile)
+
+

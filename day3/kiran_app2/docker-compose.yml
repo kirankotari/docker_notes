@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+ app1:
+  image:  kirankotari/kiran_multiweb:v2
+  container_name: kiran_c1
+  ports:
+   - "1300:80"
+ app2:
+  image: alpine
+  container_name: kiran_c2
+  command: ping  8.8.8.8

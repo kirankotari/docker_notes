@@ -1,0 +1,490 @@
+    1  exit
+    2  systemctl status docker 
+    3  df -h 
+    4  docker ps 
+    5  docker ps -a
+    6  clear
+    7  ls
+    8  docker ps -a
+    9  ping 8.8.8.8
+   10  docker version 
+   11  docker 
+   12  docker search python 
+   13  docker search fingerprint
+   14  docker search kirankotari
+   15  docker pull python 
+   16  docker images
+   17  docker search pyenv 
+   18  docker images
+   19  docker info 
+   20  docker ps
+   21  docker run alpine 
+   22  docker run alpine cal
+   23  docker run alpine ls
+   24  docker run alpine ls -lart
+   25  docker run alpine ping 8.8.8.8 -c 4 
+   26  docker ps 
+   27  docker ps -a
+   28  clear
+   29  docker run --name Kiran alpine ping 8.8.8.8
+   30  doker ps 
+   31  docker ps 
+   32  docker run --name Kiran -d  alpine ping 8.8.8.8
+   33  docker ps 
+   34  docker logs Kiran 
+   35  docker start Kiran 
+   36  docker ps 
+   37  docker log Kiran 
+   38  docker logs Kiran 
+   39  docker logs -f Kiran 
+   40  docker ps 
+   41  docker stop Kiran 
+   42  docker start Kiran 
+   43  docker kill Kiran 
+   44  docker run -d --name Kiran alpine ping 8.8.8.8
+   45  docker ps 
+   46  docker exec Kiran date
+   47  docker exec -it Kiran sh
+   48  docker exec -it Kiran ping fb.com 
+   49  docker exec -d -it Kiran ping fb.com 
+   50  docker exec -it Kiran sh
+   51  docker logs Kiran 
+   52  docker logs -f Kiran 
+   53  docker rm Kiran 
+   54  docker kill Kiran 
+   55  docker rm Kiran 
+   56  docker ps 
+   57  docker run -it --name Kiran alpine
+   58  docker exec -d -it Kiran ping 8.8.8.8
+   59  docker run -d -it --name Kiran alpine sh 
+   60  docker start Kiran 
+   61  docker ps 
+   62  docker exec -d -it Kiran ping 8.8.8.8
+   63  docker exec -d -it Kiran ping fb.com 
+   64  docker exec -d -it Kiran ping 8.8.8.8
+   65  docker exec -it Kiran sh
+   66  docker exec -it Kiran ps -eaf 
+   67  docker exec -it Kiran kill -9 18 
+   68  docker exec -it Kiran ps -eaf 
+   69  ls
+   70  docker exec -d -it Kiran ping 8.8.8.8
+   71  docker exec -it Kiran ps -eaf 
+   72  ls
+   73  mkdir day1
+   74  cd day1/
+   75  mkdir img1
+   76  cd img1/
+   77  touch Dockerfile 
+   78  vim Dockerfile 
+   79  docker build -t Kiran:V1 .
+   80  docker build -t kiran:V1 .
+   81  docker ps 
+   82  docker image
+   83  docker images
+   84  mv Dockerfile kk.dockerfile 
+   85  docker build -t kiran:V2 -f kk.dockerfile .
+   86  docker images
+   87  cd ..
+   88  mkdir pycode
+   89  cd pycode/
+   90  touch hello.py
+   91  vim hello.py 
+   92  cd ../img1/
+   93  vim kk.dockerfile 
+   94  cd ..
+   95  ls
+   96  cd pycode/
+   97  vim Dockerfile 
+   98  docker build -t kiran_pycode:v1 .
+   99  docker ps
+  100  docker images
+  101  docker run -d -it --name Kiran kiran_pycode 
+  102  docker run -d -it --name Kiran kiran_pycode:v1
+  103  docker ps
+  104  docker exec Kiran 
+  105  docker exec -it Kiran 
+  106  docker exec -it Kiran ps -eaf 
+  107  docker log -f Kiran 
+  108  docker logs -f Kiran 
+  109  docker exec -it Kiran ps -eaf 
+  110  ls
+  111  cp Dockerfile kk.dockefile
+  112  vim kk.dockefile 
+  113  docker ps 
+  114  docker kill Kiran 
+  115  docker rm Kiran 
+  116  docker run -d -it --name Kiran kiran_pycode bash
+  117  docker run -d -it --name Kiran kiran_pycode:v1 bash
+  118  docker exec -it Kiran ps -eaf 
+  119  docker kill Kiran 
+  120  docker rm Kiran 
+  121  docker build -t kiran_pycode:v2 -f kk.dockefile . 
+  122  docker images 
+  123  docker run --rm -d -it --name Kiran kiran_pycode:v2 bash
+  124  docker exec -it Kiran ps -eaf 
+  125  docker kill Kiran 
+  126  docker ps -a 
+  127  docker ps -a | grep kiran
+  128  docker ps -a | grep Kiran
+  129  ls
+  130  cp hello.py hello1.py 
+  131  cp hello.py hello2.py 
+  132  vim hello1.py 
+  133  vim hello2.py 
+  134  cp Dockerfile multi.dokerfile 
+  135  vim multi.dokerfile 
+  136  ls
+  137  docker build -t kiran_pycode:v3 -f multi.dokerfile . 
+  138  touch  .dockerignore
+  139  ls
+  140  vim .dockerignore 
+  141  vim multi.dokerfile 
+  142  docker build -t kiran_pycode:v3 -f multi.dokerfile .
+  143  docker run --rm -it -d --name Kiran kiran_pycode:v3 
+  144  docker run --rm -it -d --name Kiran1 kiran_pycode:v3 python hello1.py 
+  145  docker logs Kiran 
+  146  docker logs Kiran1 
+  147  docker images | grep -i kiran
+  148  docker ps 
+  149  docker killl Kiran 
+  150  docker kill Kiran 
+  151  docker kill Kiran1 
+  152  docker run --rm -it kiran_pycode:v3 python hello1.py 
+  153  docker ps 
+  154  history 
+  155  docker run --rm -it kiran_pycode:v3 bash 
+  156  cd ../..
+  157  mkdir htmlwebapp
+  158  cd htmlwebapp/
+  159  git clone www.github.com/microsoft/project-html-website
+  160  git clone https://github.com/microsoft/project-html-website
+  161  ls
+  162  mv project-html-website app1
+  163  ls
+  164  cd app1/
+  165  ls
+  166  cd ..
+  167  touch Dockerfile 
+  168  vim Dockerfile 
+  169  ls /tmp/
+  170  vim .dockerignore
+  171  ls
+  172  ls -a
+  173  docker build -t kiran_web:v1 . 
+  174  docker run --rm -it -d --name Kiran -p 1123:80 kiran_web:v1
+  175  docker run --rm -it -d --name Kiran -p 8100:80 kiran_web:v1
+  176  docker ps 
+  177  docker images
+  178  docker inspect nginx
+  179  docker images
+  180  docker history saumya_alpine
+  181  docker history saumya_alpine:V1.0.0
+  182  docker run --rm -it -d -p 8100:80 kiran_web:v1
+  183  docker run --rm -it -d -p 8200:80 kiran_web:v1
+  184  cd day2/
+  185  ls
+  186  cd multi-webapp/
+  187  ls
+  188  ls
+  189  sl -lR
+  190  ls -lR
+  191  cp -R day1 day2 
+  192  cd day2/
+  193  ls
+  194  rm -R img1/
+  195  cd pycode/
+  196  ls
+  197  rm -R Dockerfile kk.dockefile 
+  198  ls
+  199  vim multi.dokerfile 
+  200  docker built -t kiranpy:v1 . 
+  201  docker build -t kiranpy:v1 . 
+  202  docker build -t kiranpy:v1 -f multi.dokerfile 
+  203  docker build -t kiranpy:v1 -f multi.dokerfile .
+  204  docker images
+  205  docker run --rm -itd --name Kiran123 kiranpy:v1 
+  206  docker run --rm -itd --name Kiran124 kiranpy:v1 python hello1.py 
+  207  docker run --rm -itd --name Kiran125 kiranpy:v1 python hello2.py 
+  208  docker run --rm -itd --name Kiran126 kiranpy:v1 sh
+  209  docker log Kiran126 
+  210  docker logs Kiran126
+  211  docker run --rm -it --name Kiran126 kiranpy:v1 sh
+  212  docker ps 
+  213  docker run --rm -it --name Kiran125 kiranpy:v1 python hello2.py 
+  214  vim multi.dokerfile 
+  215  docker build -t kiranpy:v2 -f multi.dokerfile . 
+  216  docker run --rm -it --name Kiran123 
+  217  docker run --rm -it --name Kiran123 kiranpy:v2
+  218  vim multi.dokerfile 
+  219  docker build -t kiranpy:v3 -f multi.dokerfile . 
+  220  docker run --rm -it --name Kiran123 kiranpy:v3
+  221  docker run --rm -it --name Kiran123 kiranpy:v3 python hello1.py 
+  222  cat /tmp/multi.dockerfile 
+  223  vim multi.dokerfile 
+  224  docker build -t kiranpy:v3 -f multi.dokerfile . 
+  225  docker run --rm -it --name Kiran123 kiranpy:v3 python hello1.py 
+  226  cd ..
+  227  mkdir webapp2
+  228  cd webapp2/
+  229  vim Dockerfile 
+  230  docker build -t kiranhttpd:v1 .
+  231  docker run --rm -it Kiranhttpd  -p 8888:80 kiranhttpd:v1
+  232  docker run --rm -it --name Kiranhttpd  -p 8888:80 kiranhttpd:v1
+  233  docker run --rm -it kiran123 kiranpy:v3 
+  234  docker run --rm -it --name kiran123 kiranpy:v3 
+  235  cd ..
+  236  ls
+  237  cd pycode/
+  238  ls
+  239  vim multi.dokerfile 
+  240  cd ..
+  241  cd webapp2/
+  242  ls
+  243  vim Dockerfile 
+  244  git clone https://github.com/mdn/beginner-html-site-styled
+  245  ls
+  246  mv beginner-html-site-styled/ app2 
+  247  ls
+  248  docker build -t kiranhttpd:v1 .
+  249  docker run --rm -it --name Kiranhttpd  -p 8888:80 kiranhttpd:v1
+  250  docker run --rm -it --name Kiranhttpd  -p 8898:80 kiranhttpd:v1
+  251  docker os
+  252  docker ps
+  253  history 
+  254  history > docker_commands.txt
+  255  ls
+  256  mv docker_commands.txt ../..
+  257  ls
+  258  cd ..
+  259  ls
+  260  cd pycode/
+  261  vim multi.dokerfile 
+  262  docker build -t kiranpy:v4 -f multi.dokerfile . 
+  263  docker run --rm -it --name kiranpy123 kiranpy:v4 
+  264  docker ps
+  265  ls
+  266  cd ..
+  267  ls
+  268  mkdir img2 
+  269  cd img2/
+  270  vim Dockerfile 
+  271  vim env.Dockerfile
+  272  vim both.Dockerfile
+  273  cd ..
+  274  ls
+  275  mkdir webapp3 
+  276  rm -rf webapp3/
+  277  mkdir website
+  278  rm -rf website/
+  279  mkdir multi-webapp
+  280  cd multi-webapp/
+  281  git clone http://github.com/microsoft/project-html-website
+  282  git clone http://github.com/mdn/beginner-html-site-styled
+  283  ls
+  284  mv beginner-html-site-styled app2
+  285  mv project-html-website app1 
+  286  touch Dockerfile 
+  287  ls
+  288  vim Dockerfile 
+  289  ls
+  290  touch web.sh
+  291  vim web.sh
+  292  cat web.sh 
+  293  vim Dockerfile 
+  294  docker build -t kiran_multiweb:v1 .
+  295  docker run --rm -itd --name kiran_web1 -p 8890:80 kiran_multiweb:v1
+  296  docker ps
+  297  docker run --rm -itd --name kiran_web2 -p 8891:80 -e x=app2 kiran_multiweb:v1
+  298  docker run --rm -itd --name kiran_web2 -p 8892:80 -e x=app3 kiran_multiweb:v1
+  299  docker run --rm -itd --name kiran_web3 -p 8892:80 -e x=app3 kiran_multiweb:v1
+  300  docker run --rm -itd --name kiran_web2 -p 8894:80 -e x=app2 kiran_multiweb:v1
+  301  docker run --rm -itd --name kiran_web4 -p 8894:80 -e x=app2 kiran_multiweb:v1
+  302  cat Dockerfile 
+  303  ls
+  304  cd app2/
+  305  ls
+  306  vim index.html 
+  307  cd ..
+  308  vim web.sh 
+  309  docker ps
+  310  docker ps | grep kiran
+  311  docker kill kiran_* 
+  312  docker kill kiran_web1 
+  313  docker kill kiran_web2
+  314  docker kill kiran_web3
+  315  docker kill kiran_web4
+  316  docker ps | grep kiran
+  317  docker run --rm -itd --name kiran_web1 -p 8890:80 -e x=app2 kiran_multiweb:v1
+  318  docker kill kiran_web1
+  319  docker build -t kiran_multiweb:v1 .
+  320  docker run --rm -itd --name kiran_web1 -p 8890:80 -e x=app1 kiran_multiweb:v1
+  321  docker run --rm -itd --name kiran_web2 -p 8891:80 -e x=app2 kiran_multiweb:v1
+  322  docker run --rm -itd --name kiran_web3 -p 8892:80 -e x=app3 kiran_multiweb:v1
+  323  docker ps | grep krian
+  324  docker ps | grep kiran
+  325  docker images | grep kiran
+  326  ls
+  327  vim Dockerfile 
+  328  docker build -t kiran_multiweb:v2 .
+  329  docker images | grep kiran
+  330  docker tag 01fa0c23987b kirankotari/kiran_multiweb:v2
+  331  docker images | grep kiran
+  332  docker login 
+  333  docker push kirankotari/kiran_multiweb
+  334  docker search kirankotari/kiran_multiweb
+  335  docker search kirankotari
+  336  docker pull kirankotari/kiran_multiweb
+  337  docker pull kirankotari/kiran_multiweb:v2
+  338  docker images | grep kiran
+  339  docker tag 01fa0c23987b kirankotari/kiran_multiweb
+  340  docker images | grep kiran
+  341  docker push kirankotari/kiran_multiweb:latest
+  342  docker search kirankotari
+  343  docker 
+  344  docker network
+  345  docker network ls
+  346  ifconfig
+  347  ifconfig docker0 
+  348  docker run --rm -itd --name kiran alpine 
+  349  docker exec -it kiran sh 
+  350  docker --help
+  351  docker create network kknet 
+  352  docker create network kknet --subnet 172.20.0.0/16
+  353  docker network create kknet --subnet 172.20.0.0/16
+  354  docker network create kknet --subnet 172.30.0.0/16
+  355  docker network ls
+  356  docker network --help
+  357  docker network inspect kknet
+  358  docker run --rm -itd --name kk_c1 --network kknet alpine bash 
+  359  docker run --rm -itd --name kk_c1 --network kknet alpine sh
+  360  docker run --rm -itd --name kk_c2 --network kknet alpine sh
+  361  docker ps | grep kk
+  362  docker inspect kk_c1 | grep 172
+  363  docker inspect kk_c2 | grep 172
+  364  docker network create kknet1 --subnet 172.35.0.0/16
+  365  docker run --rm -itd --name kk_c3 --network kknet1 alpine sh
+  366  docker inspect kk_c3 | grep 172
+  367  docker exec -it kk_c3 sh 
+  368  docker ps 
+  369  exit
+  370  ls
+  371  docker volume kk_vol1 
+  372  docker volume create kk_vol1 
+  373  docker volume ls
+  374  docker run --rm -itd --name kk_c6 -v kk_vol1:/data alpine sh 
+  375  docker exec -it kk_c6 sh
+  376  docker run --rm -itd --name kk_c7 -v kk_vol1:/data fedora sh 
+  377  docker exec -it kk_c7 sh
+  378  docker rm kk_c7
+  379  docker exec -it kk_c6 sh
+  380  ls
+  381  docker kill kk_c6 
+  382  docker run --rm -itd --name kk_c8 -v kk_vol1:/data fedora sh 
+  383  docker exec -it kk_c8 sh
+  384  ls
+  385  mkdir day3
+  386  cd day23
+  387  cd day3
+  388  ls
+  389  cd kiran_app1 
+  390  mkdir  kiran_app1 
+  391  cd kiran_app1/
+  392  ls
+  393  vim docker-compose.yml
+  394  cat docker-compose.yml 
+  395  docker-compose up
+  396  docker logs kiran_c1
+  397  docker-compose logs kiran_c1 
+  398  docker-compose logs kiran_app1
+  399  docker-compose help
+  400  docker-compose logs --help
+  401  docker-compose logs 
+  402  docker-compose logs docker-compose.yml 
+  403  docker-compose logs kiran_c1
+  404  docker-compose logs 
+  405  cd ..
+  406  ls
+  407  mkdir kiran_app2
+  408  cd kiran_app2
+  409  touch docker-compose.yml 
+  410  vim docker-compose.yml 
+  411  docker-compose up -d 
+  412  docker-compose up
+  413  cat docker-compose.yml 
+  414  vim docker-compose.yml 
+  415  docker-compose up -d
+  416  cat docker-compose.yml 
+  417  docker-compose logs app1
+  418  docker-compose logs app2
+  419  docker-compose down
+  420  cd ..
+  421  cp -R kiran_app2 kiran_app3
+  422  cd kiran_app3/
+  423  ls
+  424  vim docker-compose.yml 
+  425  docker-compose up
+  426  cat docker-compose.yml 
+  427  cd ../..
+  428  ls
+  429  cp -rvf day2/multi-webapp/* day3/kiran_app4/
+  430  mkdir day3/kiran_app4
+  431  cp -rvf day2/multi-webapp/* day3/kiran_app4/
+  432  cd day3/kiran_app4/
+  433  ls
+  434  mkdir multi_kkweb
+  435  mv * multi_kkweb/
+  436  ls
+  437  cd multi_kkweb/
+  438  touch docker-compose.yml 
+  439  vim docker-compose.yml 
+  440  ls
+  441  docker-compose up -d 
+  442  vim docker-compose.yml 
+  443  docker-compose up -d 
+  444  docker-compose ps 
+  445  docker ps 
+  446  ls
+  447  cd app1/
+  448  ls
+  449  ll
+  450  cd ~/day2/
+  451  ls
+  452  cd multi-webapp/
+  453  ls
+  454  cd app1/
+  455  ll
+  456  cd ../app2/
+  457  ll
+  458  cat CODE_OF_CONDUCT.md 
+  459  cat LICENSE 
+  460  ls
+  461  cd ..
+  462  ls
+  463  cd ..
+  464  ls
+  465  cd multi-webapp/
+  466  ls
+  467  cd ../..
+  468  ls
+  469  cd day3/kiran_app4/
+  470  ls
+  471  cd multi_kkweb/
+  472  ls
+  473  vim app2/index.html 
+  474  cd ..
+  475  ls
+  476  cd multi_kkweb/
+  477  ls
+  478  docker-compose ps
+  479  docker-compose down
+  480  docker-compose up -d 
+  481  docker-compose down
+  482  docker-compose up -d --build 
+  483  ls
+  484  cd ..
+  485  ls
+  486  cd ..
+  487  ls
+  488  history 
+  489  cat docker_commands.txt 
+  490  history > docker_commands.txt 

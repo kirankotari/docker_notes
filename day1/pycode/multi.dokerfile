@@ -1,0 +1,8 @@
+FROM python 
+MAINTAINER kkotari522@gmail.com
+RUN mkdir /pycode
+WORKDIR /pycode
+COPY . . 
+# copy source_path to dest_path
+CMD python hello.py
+

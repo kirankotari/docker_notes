@@ -1,0 +1,20 @@
+version: "3.5"
+services:
+  app1:
+    image: multi_kk_web:day2v1 # image I wantd to build
+    build: . # location of docker file
+    container_name: kiran_c11
+    ports: 
+      - "1411:80"
+    environment:
+      x: "app1"
+        
+  app2:
+    image: multi_kk_web:day2v1 # image I wantd to build
+    build: . # location of docker file
+    container_name: kiran_c22
+    ports: 
+      - "1413:80"
+    environment:
+      x: "app2"
+
